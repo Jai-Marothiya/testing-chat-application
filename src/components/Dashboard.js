@@ -18,13 +18,13 @@ const Dashboard = () => {
       if(active===null)return (<></>);
   },[]);
 
-  useEffect(()=>{
-    var GUID = "GUID";
-    var groupName = "Hello Group!";
-    var groupType = CometChat.GROUP_TYPE.PUBLIC;
-    var password = "";
+  // useEffect(()=>{
+  //   var GUID = "GUID";
+  //   var groupName = "Hello Group!";
+  //   var groupType = CometChat.GROUP_TYPE.PUBLIC;
+  //   var password = "";
 
-    var GUID = "GUID";
+  //   var GUID = "GUID";
     // CometChat.getGroup(GUID).then(
     //   group => {
     //     console.log("Group details fetched successfully:", group);
@@ -42,7 +42,7 @@ const Dashboard = () => {
     //     console.log("Group creation failed with exception:", error);
     //   }
     // );
-  },[]);
+  // },[]);
   return (
     <div style={{height:"100vh"}}>
         <Navbar/>

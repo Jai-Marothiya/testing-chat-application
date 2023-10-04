@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ChatList from './ChatList';
+// import ChatList from './ChatList';
 import Interface from './Interface';
 import { CometChat } from '@cometchat-pro/chat';
 

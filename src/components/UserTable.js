@@ -9,9 +9,9 @@ import Paper from '@mui/material/Paper';
 import { Box } from '@mui/material';
 import { CometChat } from '@cometchat-pro/chat';
 
-function createData(name,email) {
-  return { name, email };
-}
+// function createData(name,email) {
+//   return { name, email };
+// }
 
 export default function UserTable() {
 
@@ -33,8 +33,8 @@ export default function UserTable() {
         
   // },[])
     const [users, setUsers] = useState([]);
-    const [name, setName] = useState("");
-    const [forceRerender, setForceRerender] = useState(false); // Add this state variable
+    // const [name, setName] = useState("");
+    // const [forceRerender, setForceRerender] = useState(false); // Add this state variable
 
     // useEffect(() => {
     //   CometChat.getLoggedinUser().then(

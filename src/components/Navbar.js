@@ -23,16 +23,16 @@ function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
     const [pages,setPages]=useState([]);
-    const [userName, setUserName]=useState("");
+    // const [userName, setUserName]=useState("");
     // const [loading, setLoading] = useState(true);
 
-    React.useEffect(()=>{
+    useEffect(()=>{
       CometChat.getLoggedinUser().then(
         user => {
           console.log("user details:", {user});
           if(pages.length===0 && user!==null){
             setPages(`User: ${user.name}`);
-            setUserName(user.name);
+            // setUserName(user.name);
           }
         }, error => {
           console.log("error getting details:", { error });

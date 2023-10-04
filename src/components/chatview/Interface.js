@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from "react";
+import React, {useState} from "react";
 import {
   Box,
   TextField,
@@ -12,11 +12,11 @@ import SendIcon from "@mui/icons-material/Send";
 import ChatHeader from './ChatHeader';
 import { CometChat } from "@cometchat-pro/chat";
 
-const messages = [
-  { id: 1, text: "Hi there!", sender: "bot" },
-  { id: 2, text: "Hello!", sender: "user" },
-  { id: 3, text: "How can I assist you today?", sender: "bot" },
-];
+// const messages = [
+//   { id: 1, text: "Hi there!", sender: "bot" },
+//   { id: 2, text: "Hello!", sender: "user" },
+//   { id: 3, text: "How can I assist you today?", sender: "bot" },
+// ];
 
 const Interface = ({conversations,setText,userName}) => {
   const [input, setInput] = useState("");

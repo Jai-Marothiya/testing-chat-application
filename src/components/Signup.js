@@ -31,8 +31,8 @@ function Copyright(props) {
 // TODO remove, this demo shouldn't need to reset the theme.
 
 const defaultTheme = createTheme();
-const appID = process.env.REACT_APP_COMETCHAT_APP_ID;
-const region = process.env.REACT_APP_COMETCHAT_REGION;
+// const appID = process.env.REACT_APP_COMETCHAT_APP_ID;
+// const region = process.env.REACT_APP_COMETCHAT_REGION;
 const authKey = process.env.REACT_APP_COMETCHAT_AUTH_KEY;
 
 export default function SignUp() {
