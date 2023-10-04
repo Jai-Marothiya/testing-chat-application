@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React, { Component, useEffect, useState } from "react";
+import { BrowserRouter , Routes, Route} from "react-router-dom";
+import SignUp from "./components/Signup";
+import SignIn from "./components/Signin";
+import Dashboard from "./components/Dashboard";
+import ChatInterface from "./components/chatview/ChatInterface";
+import { CometChat } from "@cometchat-pro/chat";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [active, setactive]=useState();
+    useEffect(()=>{
+      CometChat.getLoggedinUser().then(
+        user => {
+          let name = {user};
+          setactive(name.user);
+          console.log("user details:", { user });
+        }, error => {
+          console.log("error getting details:", { error });
+        }
+      );
+    },[]);
+
+    return (
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={active===null?<SignIn/>:<Dashboard/>}/>
+            <Route path="/signup" element={<SignUp/>} />
+            <Route path="/login" element={<SignIn/>} />
+            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path="/interface" element={<ChatInterface/>}/>
+            {/* <Route exact path="/" component={} /> */} 
+          </Routes>
+        </BrowserRouter>
+    );
 }
+
 
 export default App;
